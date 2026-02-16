@@ -208,7 +208,7 @@ docker history nginx-apline
 mkdir html
 echo "<h1>Ronak Agarwal 500122721</h1>" > html/index.html
 ```
-![Result](./Images/16.png)
+![Result](./Images/15.png)
 
 _Run:_
 
@@ -219,7 +219,6 @@ docker run -d \
   nginx
 ```
 ![Command](./Images/16.png)
-
 
 
 **Task 2: Reverse Proxy (Conceptual)**
@@ -287,3 +286,4 @@ _Example use cases:_
 
 
 <hr>
+
