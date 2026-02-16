@@ -4,7 +4,7 @@ It is related to Docker daemon verification and basic interaction with Docker us
 
 
 
-### 1. Checked Docker socket
+### Step 1: Checked Docker socket
 We first checked whether the Docker socket exists and is accessible.
 
 Command used:
@@ -15,7 +15,7 @@ This showed that /var/run/docker.sock is linked to the Docker Desktop socket loc
 
 ![](./Images/1.png)
 
-2. Pinged Docker daemon using curl
+### Step 2: Pinged Docker daemon using curl
 We used curl with the Unix socket to check if Docker is responding.
 
 Command used:
@@ -29,7 +29,7 @@ This confirmed that the Docker daemon is active and responding to API requests.
 
 ![](./Images/2.png)
 
-3. Checked Docker version via REST API 
+### Step 3: Checked Docker version via REST API 
 We retrieved Docker version details directly from the Docker API.
 
 Command used:
@@ -48,7 +48,7 @@ OS and architecture
 
 ![](./Images/3.png)
 
-4. Listed running containers using REST API
+### Step 4: Listed running containers using REST API
 We checked if any containers were running using the containers API endpoint.
 
 Command used:
