@@ -1,10 +1,14 @@
 from flask import Flask
+
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from CI/CD Pipeline!"
-    #return "Hello from CI/CD Pipeline!, my sapid is 123456"
+    return "Hello from CI/CD Pipeline - Version 2!"
 
-app.run(host="0.0.0.0", port=80)
+@app.route("/health")
+def health():
+    return "App is running successfully."
 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=80)
