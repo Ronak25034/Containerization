@@ -1,4 +1,4 @@
-## Experiment 3:- Containerized Web Application with PostgreSQL using Docker Compose and Macvlan/IPvlan
+## Assignment 1:- Containerized Web Application with PostgreSQL using Docker Compose and Macvlan/IPvlan
 
 
 
@@ -156,7 +156,7 @@ services:
     environment:
       POSTGRES_DB: mydb
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD: dhairya
+      POSTGRES_PASSWORD: Ronak
 
     volumes:
       - pgdata:/var/lib/postgresql/data
@@ -237,7 +237,7 @@ docker-compose up -d
 ```bash
 curl -X POST http://192.168.50.20:3000/users \
 -H "Content-Type: application/json" \
--d '{"name":"Dhairya"}'
+-d '{"name":"Ronak"}'
 ```
 ![Insert User](./Images/14.png)
 
