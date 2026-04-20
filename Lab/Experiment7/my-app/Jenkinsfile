@@ -2,27 +2,32 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "dhairyathareja/myapp"
+        IMAGE_NAME = "ronak2503/myapp"
     }
 
     stages {
 
+        stage('Clone Source') {
+            steps {
+                git branch: 'main', url: '~'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
-                s++h 'docker build -t $IMAGE_NAME:latest .'
+                sh 'docker build -t $IMAGE_NAME:latest .'
             }
         }
 
         stage('Login to Docker Hub') {
             steps {
                 withCredentials([string(credentialsId: 'dockerhub-token', variable: 'DOCKER_TOKEN')]) {
-                    sh 'echo $DOCKER_TOKEN | docker login -u dhairyathareja --password-stdin'
+                    sh 'echo $DOCKER_TOKEN | docker login -u ronak2503 --password-stdin'
                 }
             }
         }
 
-        stage('Push to Docker Hub') { 
+        stage('Push to Docker Hub') {
             steps {
                 sh 'docker push $IMAGE_NAME:latest'
             }
