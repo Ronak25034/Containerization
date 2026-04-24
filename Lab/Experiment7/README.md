@@ -69,7 +69,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from CI/CD Pipeline!, my sapid is 500118984"
+    return "Hello from CI/CD Pipeline!, my sapid is 500122721"
 
 app.run(host="0.0.0.0", port=80)
 ```
@@ -90,7 +90,7 @@ Paste this:
 flask
 ```
 
-![Create Requirements](./Images/2.png)
+![Create Requirements](./Images/3.png)
 
 ---
 
@@ -114,7 +114,7 @@ EXPOSE 80
 CMD ["python", "app.py"]
 ```
 
-![Create Dockerfile](./Images/3.png)
+![Create Dockerfile](./Images/2.png)
 
 ---
 
@@ -204,7 +204,7 @@ docker-compose up -d
 docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-![Exec Container](./Images/7.png)
+![Exec Container](./Images/8.png)
 
 ---
 
@@ -214,49 +214,49 @@ docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 http://localhost:8080
 ```
 
-![Jenkins Dashboard](./Images/8.png)
+![Jenkins Dashboard](./Images/7.png)
 
 ---
 
 **Step 9: Install Suggested Plugins**
 
-![Install Plugins](./Images/9.png)
+![Install Plugins](./Images/10.png)
 
 ---
 
 **Step 10: Plugins List**
 
-![Plugins List](./Images/10.png)
+![Plugins List](./Images/11.png)
 
 ---
 
 **Step 11: Create Admin User**
 
-![Create Admin User](./Images/11.png)
+![Create Admin User](./Images/12.png)
 
 ---
 
 **Step 12: Admin Dashboard Interface**
 
-![Admin Dashboard](./Images/12.png)
+![Admin Dashboard](./Images/13.png)
 
 ---
 
 **Step 13: Add `DockerHub Token` in Credentials**
 
-![Token](./Images/13.png)
+![Token](./Images/14.png)
 
 ---
 
 **Step 14: Create a Repository in DockerHub**
 
-![Repo](./Images/14.png)
+![Repo](./Images/15.png)
 
 ---
 
 **Step 15: Repository will be listed**
 
-![Repo List](./Images/15.png)
+![Repo List](./Images/16.png)
 
 ---
 
@@ -266,25 +266,21 @@ http://localhost:8080
 - Name: `ci-cd-pipeline`
 - Definition: Pipeline Script from SCM
 
-![Pipeline Job](./Images/16.png)
+![Pipeline Job](./Images/17.png)
 
 ---
 
 **Step 17: Build Pipeline & Track Stages in Console Output**
 
-![Console](./Images/17.png)
+![Console](./Images/18.png)
 
 ---
 
 **Step 18: Build Status Success will be shown with Green Tick**
 
-![Build Status](./Images/18.png)
+![Build Status](./Images/19.png)
 
 ---
 
-**Step 19: Repo will be consisting Image Now!**
 
-![DockerHub Repo](./Images/19.png)
-
----
 
